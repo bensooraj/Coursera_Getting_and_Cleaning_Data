@@ -79,14 +79,14 @@ The README.txt file contains useful information about the dataset and about the 
 		</ol>
 	</li>
 	<li>STEP 3: Name the activities in the dataset
-		<ul>
-			<li>1 <= WALKING</li>
-			<li>2 <= WALKING_UPSTAIRS</li>
-			<li>3 <= WALKING_DOWNSTAIRS</li>
-			<li>4 <= SITTING</li>
-			<li>5 <= STANDING</li>
-			<li>6 <= LAYING</li>
-		</ul>
+		<ol>
+			<li>1 as WALKING</li>
+			<li>2 as WALKING_UPSTAIRS</li>
+			<li>3 as WALKING_DOWNSTAIRS</li>
+			<li>4 as SITTING</li>
+			<li>5 as STANDING</li>
+			<li>6 as LAYING</li>
+		</ol>
 	</li>
 	<li>STEP 4: Assign descriptive variable names to the features
 		<ol>

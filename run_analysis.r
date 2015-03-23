@@ -55,7 +55,7 @@ colnames(X_test) <- features[,2]
 colnames(Y_test) <- "activity"
 colnames(subject_test) <- "subject"
 
-// Combines the training sets Y_test, X_test and subject_test
+// Combines the test sets Y_test, X_test and subject_test
 testDataTemp <- cbind(Y_test, X_test)
 testDataFinal <- cbind(subject_test, testDataTemp)
 
@@ -100,6 +100,7 @@ names(mergedDataSet) <- gsub("Acc", "Acceleration", names(mergedDataSet))
 names(mergedDataSet) <- gsub("Gyro", "Gyroscope", names(mergedDataSet))
 names(mergedDataSet) <- gsub("Mag", "Magnitude", names(mergedDataSet))
 
+// STEP 5
 // I preferred the wide approach.
 // |   "subject"  |    "activity"      |          79 features          |
 // |--------------|--------------------|-------------------------------|
@@ -109,7 +110,5 @@ names(mergedDataSet) <- gsub("Mag", "Magnitude", names(mergedDataSet))
 //
 averagesMergedDataSet <- mergedDataSet %>% group_by(subject, activity) %>% summarise_each(funs(mean))
 
-// STEP 5
 // Presenting..... the averagesMergedDataSet.txt file in your working directory.
 write.table(averagesMergedDataSet, "averagesMergedDataSet.txt", row.name=FALSE)
-
